@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Dnevniki obiskov</h1>
+
+  <p *ngIf="currentVisit">
+    <strong>Trenutni obisk:</strong>
+    ob času {{ formatToGMT1(currentVisit!.timestamp) }}
+    z IP naslova {{ currentVisit!.ip }}<br><br>
+  </p>
+  
+  <p><strong>Skupno število obiskov:</strong> {{ visitCount }}</p>
+
+  <button (click)="deleteVisits()">Izbriši vse obiske</button>
+
+  <h3>Pretekli obiski:</h3>
+  <ul class="visit-list">
+    <li *ngFor="let visit of visits" class="visit-item">
+      <span class="ip">{{ visit.ip }}</span>
+      <span class="time">{{ formatToGMT1(visit.timestamp) }}</span>
+    </li>
+  </ul>
+
+</div>

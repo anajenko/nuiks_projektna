@@ -1,0 +1,42 @@
+.container {
+  max-width: 850px;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+}
+
+.visit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.visit-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.ip {
+  color: #333;
+}
+
+.time {
+  color: #666;
+  font-style: italic;
+}
+
+button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: darkred;
+}
